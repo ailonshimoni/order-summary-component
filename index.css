@@ -1,0 +1,241 @@
+/* red-hat-display-500 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/red-hat-display-v21-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* red-hat-display-700 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/red-hat-display-v21-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* red-hat-display-900 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/red-hat-display-v21-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+  --primary-blue: hsl(245, 75%, 52%);
+  --secondary-gray: hsl(224, 23%, 55%);
+  --black:hsl(0, 0%, 0%);
+  --white: hsl(0, 0%, 100%);
+  --primary-blue-dark: hsla(245, 75%, 52%, 0.223);
+  --neutral-pale-blue: hsl(225, 100%, 94%);
+  --white-bg: hsl(225, 100%, 98%);
+  --card-shadow: rgba(0,0,0,0.1);
+  --payment-btn-color: hsla(240, 100%, 47%, 0.513);
+  
+}
+
+
+
+/*  RESET */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img,
+picture,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('images/pattern-background-mobile.svg');
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-color: var(--neutral-pale-blue);
+   
+}
+
+.card{
+    
+    width: min(90%, 22.5rem);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px var(--card-shadow);
+    padding-block-end: clamp(1rem, 3vh, 2rem);
+    background-color: white;
+    
+}
+
+.card__hero{
+    border-radius: 15px 15px 0px 0px;
+    width: 100%;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.card__content{
+    width: calc(100% - 4rem);
+    margin: 0 auto;
+    margin-block-start: 2.2rem;
+}
+
+.card__header{
+    margin: 0 auto;
+    text-align: center;
+    max-width: 90%; 
+   
+}
+
+.card__title{
+    font-size: clamp(1.1em, 5vw, 1.4rem);
+    font-weight: 900;
+}
+
+.card__description{
+    color: var(--secondary-gray);
+    font-size: 0.8rem;
+    margin-block-start: 0.8rem;
+    line-height: 1.3rem;
+     
+}
+
+
+
+.card__plan{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 1.5rem;
+    margin-block-start: 0.75rem;
+    background-color: var(--white-bg);
+    border-radius: 10px;
+}
+.card__plan-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+
+}
+
+.card__plan-name, .card__plan-rate {
+    margin: 0.19rem 0rem;
+}
+
+.card__plan-name{
+    font-weight: 900;
+    font-size: 0.85rem;
+}
+
+
+.card__plan-rate{
+    color: var(--secondary-gray);
+    font-size: 0.875rem;
+
+}
+
+
+.card__change{
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: underline;
+    color: var(--primary-blue);
+}
+
+.card__change:hover{
+    color: var(--payment-btn-color);
+}
+
+
+.card__footer{
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    margin-block-start: 1.4rem;
+    padding-block-end: 0.6rem;
+}
+
+
+.card__payment{
+    background-color: var(--primary-blue);
+    color: var(--white);
+    box-shadow: 0 20px 20px var(--primary-blue-dark);
+  
+    
+}
+
+.card__payment:hover{
+    background-color: var(--payment-btn-color);
+}
+
+
+.card__cancel{
+    color: var(--secondary-gray);
+   
+    
+}
+
+.card__cancel:hover{
+    color: var(--black);
+}
+
+
+
+.btn{
+    border: none;
+    padding: 0.8rem;
+    border-radius: 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/* 23.438rem = 375px */
+@media (min-width: 23.438rem) { 
+    body{
+    background-image: url('images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+       }
+}
