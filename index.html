@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="preload"
+      href="./fonts/red-hat-display-v21-latin-500.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link
+      rel="preload"
+      href="./fonts/red-hat-display-v21-latin-700.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link
+      rel="preload"
+      href="./fonts/red-hat-display-v21-latin-900.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <title>Frontend Mentor | Order summary card</title>
+  </head>
+  <body>
+    <main>
+      <article class="card">
+        <img
+          src="images/illustration-hero.svg"
+          alt="A person enjoys music."
+          class="card__hero"
+          width="450"
+          height="220"
+        />
+        <div class="card__content">
+          <header class="card__header">
+            <h1 class="card__title">Order Summary</h1>
+            <p class="card__description">
+              You can now listen to millions of songs, audiobooks, and podcasts
+              on any device anywhere you like!
+            </p>
+          </header>
+          <div class="card__plan">
+            <div class="card__plan-wrapper">
+              <img
+                src="images/icon-music.svg"
+                alt=""
+                class="card__icon"
+                width="48"
+                height="48"
+              />
+              <div class="card__plan-category">
+                <p class="card__plan-name">Annual Plan</p>
+                <p class="card__plan-rate">$59.99/year</p>
+              </div>
+            </div>
+            <button type="button" class="card__change">Change</button>
+          </div>
+          <footer class="card__footer">
+            <button type="button" class="card__payment btn">
+              Proceed to Payment
+            </button>
+            <button type="button" class="card__cancel btn">Cancel Order</button>
+          </footer>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
